@@ -23,7 +23,7 @@ let accounts = [
 //accounts GET (all). 
 //Sends back a page with all of the accounts listed (only show their names and
 //balances)
-app.get("", (req, res) => { });
+app.get("/accounts", (req, res) => { });
 
 //accounts GET (single)
 //Sends. back a single page with the details of a single acount displayed
