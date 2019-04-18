@@ -27,7 +27,7 @@ app.get("", (req, res) => { });
 
 //accounts GET (single)
 //Sends. back a single page with the details of a single acount displayed
-app.get("/accounts/:id", (req, res) => {
+app.get("/accounts/:id/get", (req, res) => {
 
   //get the account from the API (Model)
   let account = bankApi.getAccountAtId(accounts, req.params.id);
@@ -40,19 +40,19 @@ app.get("/accounts/:id", (req, res) => {
 //accounts POST
 //this should add a new POST from req.body to accounts (global variable)
 //and sends back the same page to list all accounts.
-app.get("", (req, res) => {
+app.post("/accounts/:id/post", (req, res) => {
 });
 
 //accounts PUT (note here you'll need to put /put at the end of your
 //path. This is a work around because HTML forms only allow GET and POST
 //requests). Make sure the HTML Form has the pattern: action='.../put' 
-app.get("", (req, res) => {
+app.put("/accounts/:id/put", (req, res) => {
 });
 
 //accounts DELETE (note here you'll need to put /delete at the end of your
 //path. This is a work around because HTML forms only allow GET and POST
 //requests). Make sure the HTML Form has the pattern: action='.../put' 
-app.get("", (req, res) => { 
+app.delete("/accounts/:id/delete", (req, res) => { 
 });
 
 //keep these lines at the bottom of the file
