@@ -23,7 +23,10 @@ let accounts = [
 //accounts GET (all). 
 //Sends back a page with all of the accounts listed (only show their names and
 //balances)
-app.get("/accounts", (req, res) => { });
+app.get("/accounts/account", (req, res) => { 
+  let account = bankApi.getAccountAtId(accounts, req.params.id);
+  res.render("accounts/account", { account } ); 
+ });
 
 //accounts GET (single)
 //Sends. back a single page with the details of a single acount displayed
