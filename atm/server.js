@@ -20,7 +20,7 @@ let accounts = [
 //call methods in the bankApi as needed. Feel free to modify the API
 //as you see fit to accomplish the goals of the app
 app.get("/", (req, res) => {
-  res.send("welcome")
+  return res.render("../views/accounts/account.hbs", { accounts } );
 });
 //accounts GET (all). 
 //Sends back a page with all of the accounts listed (only show their names and
