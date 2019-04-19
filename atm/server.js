@@ -19,13 +19,15 @@ let accounts = [
 //Write your HTTP request handlers using RESTful routes here
 //call methods in the bankApi as needed. Feel free to modify the API
 //as you see fit to accomplish the goals of the app
-
+app.get("/", (req, res) => {
+  res.send("welcome")
+});
 //accounts GET (all). 
 //Sends back a page with all of the accounts listed (only show their names and
 //balances)
-app.get("/accounts/account", (req, res) => { 
-  let account = bankApi.getAccountAtId(accounts, req.params.id);
-  res.render("accounts/account", { account } ); 
+app.get("/accounts", (req, res) => { 
+  // let account = bankApi.getAccountAtId(accounts, req.params.id);
+  res.render("/accounts/account", { accounts } ); 
  });
 
 //accounts GET (single)
