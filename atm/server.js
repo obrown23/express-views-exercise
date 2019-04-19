@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 //Sends back a page with all of the accounts listed (only show their names and
 //balances)
 app.get("/accounts", (req, res) => { 
-  // let account = bankApi.getAccountAtId(accounts, req.params.id);
+  let account = accounts;
   res.render("/accounts/account", { accounts } ); 
  });
 
@@ -58,7 +58,7 @@ app.put("/accounts/:id/put", (req, res) => {
 //path. This is a work around because HTML forms only allow GET and POST
 //requests). Make sure the HTML Form has the pattern: action='.../put' 
 app.delete("/accounts/:id/delete", (req, res) => { 
-});
+res.send('delete') });
 
 //keep these lines at the bottom of the file
 const PORT = process.env.PORT || 3000 
